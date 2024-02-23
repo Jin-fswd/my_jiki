@@ -1,0 +1,18 @@
+#textInput {
+    width: 200%;
+    height: 200px; 
+    resize: vertical; 
+  }
+.init-button-container {
+  display: flex;
+  margin: 20px;
+}
+.init-button {
+  padding: 5px 10px;
+  background-color: gray;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 10px;
+}

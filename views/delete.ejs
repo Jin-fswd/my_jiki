@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Delete</title>
+  <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+</head>
+
+<body>
+    <h1>Delete <%= article.name %></h1>
+    <p> are you sure you want to delete this article?</p>
+    <form method="post" action="/article/:<%= article.name %>/delete">
+        <input type="hidden" name="title" value="<%= article.name %>">
+        <button type="submit">Destroy it</button>
+    </form>
+  <hr>
+  <a href="#" onclick="window.history.back(); return false;">Never mind</a>
+</body>
+</html>

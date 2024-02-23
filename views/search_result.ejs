@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Search Results</title>
+  <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+</head>
+
+<body>
+    <section>
+        <h1>Search results for <%= term %></h1>
+        <% if(article.length === 0) { %>
+            <h2>No search results</h2>
+        <% } else { %>
+            <% //console.log(article) %>
+        <ul>
+            <% article.forEach(page => { %>
+                <li>
+                    <a href="http://localhost:3000/article/<%=page.name%>"><%= page.name %></a>
+                </li>
+            <% }); %>
+        </ul>
+        <% } %>
+  <hr>
+    <div class="init-button-container">
+        <a href="/" class="init-button">Back to Home</a>
+    </div>
+</body>
+</html>

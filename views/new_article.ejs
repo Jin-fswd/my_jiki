@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>init.ejs</title>
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
+  </head>
+
+  <body>
+    <h1>Create A New Wiki Article</h1>
+    <div>
+      <form action="/newarticle" method="post">
+        <h1>name of your new article</h1>
+        <% if (articlename) { %>
+        <input type="text" id="titleInput" name="title" value="<%= articlename %>"/>
+        <% } else { %>
+        <input type="text" id="titleInput" name="title" placeholder="title" />
+        <% } %>
+
+        <h2>content of your new article</h2>
+        <textarea id="textInput" name="contents" placeholder="contents"></textarea>
+        <button type="submit">submit</button>
+        <a href="#" onclick="window.history.back(); return false;">Never mind</a>
+      </form>
+    </div>
+  </body>
+</html>

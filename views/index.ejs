@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Index.ejs</title>
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
+  </head>
+  <body>
+    <h1>My Wiki</h1>
+    <hr />
+    <section>
+      <div>
+        <p>Here is a sample article you could click on</p>
+        <ul>
+          <%  article.forEach(page => { %>
+          <li>
+            <a href="http://localhost:3000/article/<%= page.name %>"><%= page.name %></a>
+          </li>
+          <% }); %>
+        </ul>
+        <p>
+          Or perhaps you'd rather
+          <a href="./newarticle">click here to creat a new article</a>
+        </p>
+      </div>
+    </section>
+    <section>
+      <div>
+        <form action="./search" method="get">
+          <p>Or search for an article</p>
+          <label for="searchInput">search:</label>
+          <input type="text" id="searchInput" name="term" placeholder="@:^)" />
+          <button type="submit">search</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

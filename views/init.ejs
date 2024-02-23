@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>init.ejs</title>
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
+  </head>
+
+  <body>
+    <h1><%= article.name %></h1>
+    <div class="init-button-container">
+      <a href="/article/<%=article.name %>/delete" class="init-button"
+        >delete</a
+      >
+      <a href="/article/<%=article.name %>/edit" class="init-button">edit</a>
+      <a href="/" class="init-button">home</a>
+    </div>
+    <hr />
+    <section>
+      <p><%- article.contents %></p>
+    </section>
+  </body>
+</html>
